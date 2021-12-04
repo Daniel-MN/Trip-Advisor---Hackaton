@@ -52,7 +52,12 @@ public class Restrictions extends Atributes{
         if (this.isLockDown()) {
             string.append("YES\n");
         }
+        string.append("Mask Required: ");
         string.append(this.getMaskRequired() + "\n");
+        string.append("Mobility restrictions: ");
+        string.append(this.getMobilityRestrictions() + "\n");
+        string.append("Regulated closing hours: ");
+        string.append(this.getRegulatedClosingHours() + "\n");
         return string.toString();
     }
 }

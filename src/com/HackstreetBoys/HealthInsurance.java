@@ -10,6 +10,7 @@ public class HealthInsurance extends Atributes{
     public HealthInsurance(int ID, String description) {
         super(description);
         this.ID = ID;
+        insuranceProviders = new HashMap<>();
     }
 
     boolean searchProvider(String providerName) {
