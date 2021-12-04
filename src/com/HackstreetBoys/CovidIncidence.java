@@ -27,17 +27,13 @@ public class CovidIncidence extends Atributes{
         this.vaccinationRate = vaccinationRate;
     }
 
-    public int getIncidence() {
-        return totalConfirmedCases;
+    public float getIncidence() {
+        return this.incidence;
     }
 
 
     public float getVaccinationRate() {
         return vaccinationRate;
-    }
-
-    public void setIncidence(int totalConfirmedCases) {
-        this.totalConfirmedCases = totalConfirmedCases;
     }
 
     public void setVaccinationRate(float vaccinationRate) {
@@ -67,6 +63,8 @@ public class CovidIncidence extends Atributes{
     public void setID(int ID) {
         this.ID = ID;
     }
+
+
 
     public int getNewConfirmed() {
         return newConfirmed;

@@ -127,8 +127,9 @@ public class Country {
         string.append("Total covid-19 cases until now: " + this.getCovidIncidence().getTotalConfirmedCases() + "\n");
         string.append("Vaccination rate: " + this.getCovidIncidence().getVaccinationRate() + "% of adults\n");
         string.append("Restrictions: \n" + this.getRestrictions().toString());
+        string.append(this.getRestrictions().getDescription() + "\n");
         string.append("Air quality Indicators: \n" + this.getAirquality().toString());
-        string.append("Health System Rating: " + this.getHealthSystem().getRating());
+        string.append("Health System Rating: " + this.getHealthSystem().getRating() + "\n");
         string.append("Health insurance providers: " + this.getHealthInsurance().toString());
         return string.toString();
     }
