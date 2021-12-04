@@ -44,4 +44,14 @@ public class HealthInsurance extends Atributes{
     public void setNrProviders(int nrProviders) {
         this.nrProviders = nrProviders;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder string = new StringBuilder();
+        for (String provider : insuranceProviders.values()) {
+            string.append(provider + "; ");
+        }
+
+        return string.toString();
+    }
 }

@@ -32,11 +32,7 @@ public class Parameter {
 
     @Override
     public String toString() {
-        return "Parameter{" +
-                "name='" + name + '\'' +
-                ", value=" + value +
-                ", unit='" + unit + '\'' +
-                '}';
+        return this.name + ": " + this.getValue() + this.getUnit() + "\n";
     }
 }
 

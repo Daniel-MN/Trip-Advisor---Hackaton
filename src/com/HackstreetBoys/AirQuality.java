@@ -102,4 +102,12 @@ public class AirQuality extends Atributes {
         this.parameters[8].setUnit(unit);
     }
 
+    @Override
+    public String toString() {
+        StringBuilder string = new StringBuilder("");
+        for (int i = 0; i < 9; i++) {
+            string.append(this.parameters[i].toString());
+        }
+        return string.toString();
+    }
 }

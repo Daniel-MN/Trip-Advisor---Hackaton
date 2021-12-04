@@ -114,12 +114,12 @@ public class Country {
     public String toString() {
         StringBuilder string = new StringBuilder("Country: " + this.getName() + "\n");
         if (this.getConflictZone().isConflict()) {
-            string.append("CONFLICT ZONE\n");
+            string.append("!!!CONFLICT ZONE!!!\n");
             string.append(this.getConflictZone().getDescription() + "\n");
         }
 
         if (this.getNaturalDisasters().isDisaster()) {
-            string.append("DEZASTRU NATURAL\n");
+            string.append("!!!NATURAL DISASTER!!!\n");
             string.append(this.getNaturalDisasters().getDescription()+"\n");
         }
 
@@ -127,7 +127,9 @@ public class Country {
         string.append("Total covid-19 cases until now: " + this.getCovidIncidence().getTotalConfirmedCases() + "\n");
         string.append("Vaccination rate: " + this.getCovidIncidence().getVaccinationRate() + "% of adults\n");
         string.append("Restrictions: \n" + this.getRestrictions().toString());
-        string.append("Air quality Indicators: \n" + this.getAirquality());
+        string.append("Air quality Indicators: \n" + this.getAirquality().toString());
+        string.append("Health System Rating: " + this.getHealthSystem().getRating());
+        string.append("Health insurance providers: " + this.getHealthInsurance().toString());
         return string.toString();
     }
 }
