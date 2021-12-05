@@ -67,7 +67,7 @@ public class CovidIncidence extends Atributes{
 
     @Override
     public float getRating() {
-        return this.getIncidence()/10;
+        return (2 - this.getIncidence()/20);
     }
 
     public int getNewConfirmed() {

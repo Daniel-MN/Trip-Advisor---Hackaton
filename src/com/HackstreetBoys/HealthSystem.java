@@ -41,7 +41,7 @@ public class HealthSystem extends Atributes{
 
     @Override
     public float getRating() {
-        return getSystemRating();
+        return getSystemRating()/5;
     }
 }
 

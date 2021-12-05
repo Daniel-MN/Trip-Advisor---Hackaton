@@ -1,5 +1,7 @@
 package com.HackstreetBoys;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 
 public class Administration {
@@ -27,5 +29,12 @@ public class Administration {
 
         ratingCountry += country.getCovidIncidence().getRating() + country.getHealthInsurance().getRating() + country.getAirquality().getRating() + country.getHealthSystem().getRating() + country.getRequirements().getRating();
         return ratingCountry;
+    }
+
+    public static ArrayList<Country> sortCountries(HashMap<Integer, Country> countries) {
+
+        ArrayList<Country> unsortedCountries = new ArrayList<>(countries.values());
+        Collections.sort(unsortedCountries);
+        return unsortedCountries;
     }
 }

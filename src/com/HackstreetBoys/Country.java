@@ -1,6 +1,6 @@
 package com.HackstreetBoys;
 
-public class Country {
+public class Country implements Comparable<Country> {
     private String name;
     private int ID;
     private AirQuality airquality;
@@ -151,5 +151,19 @@ public class Country {
         string.append("Health System Rating: " + this.getHealthSystem().getRating() + "\n");
         string.append("Health insurance providers: " + this.getHealthInsurance().toString());
         return string.toString();
+    }
+
+    @Override
+    public int compareTo(Country o) {
+        float diff = Administration.calculateRatingCountry(this) - Administration.calculateRatingCountry(o);
+        if (diff < 0) {
+            return 1;
+        } else {
+            if (diff == 0) {
+                return 0;
+            }
+        }
+
+        return -1;
     }
 }

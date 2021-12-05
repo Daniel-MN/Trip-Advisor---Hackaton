@@ -54,15 +54,15 @@ public class Restrictions extends Atributes{
 
         float rating = 0;
 
-        if (this.getMaskRequired() == null) {
+        if (this.getMaskRequired().equals("No mask")) {
             rating += 1;
         }
 
-        if (this.getMobilityRestrictions() == null) {
+        if (this.getMobilityRestrictions().equals("No mobility restrictions")) {
             rating += 0.5;
         }
 
-        if (this.getRegulatedClosingHours() == null) {
+        if (this.getRegulatedClosingHours().equals("No regulating closing hours")) {
             rating += 0.5;
         }
 

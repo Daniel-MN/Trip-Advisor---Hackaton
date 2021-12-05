@@ -48,9 +48,9 @@ public class HealthInsurance extends Atributes {
 
     @Override
     public float getRating() {
-        if (nrProviders >= 5) {
-             return 1;
-        } else return (float) (nrProviders * 0.2);
+        if (nrProviders >= 4) {
+             return 2;
+        } else return (float) (nrProviders * 0.5);
     }
 
     @Override

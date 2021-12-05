@@ -69,10 +69,10 @@ public class EntryRequirements extends Atributes{
     @Override
     public float getRating() {
         if (this.isCovidVaccine()) {
-            return 1;
+            return (float)1.9;
         }
         if (this.isAntigenTest() || this.isPCRtest()) {
-            return 0;
+            return (float)1.7;
         }
         return 0;
     }
