@@ -82,7 +82,6 @@ public class Database {
     }
 
     public void initNorway() {
-        Database database = new Database();
         Country tara = Administration.searchCountry("Norway");
         tara.getCovidIncidence().setIncidence(1.1F);
         tara.getCovidIncidence().setVaccinationRate(82.3F);

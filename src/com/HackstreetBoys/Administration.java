@@ -32,7 +32,6 @@ public class Administration {
     }
 
     public static ArrayList<Country> sortCountries(HashMap<Integer, Country> countries) {
-
         ArrayList<Country> unsortedCountries = new ArrayList<>(countries.values());
         Collections.sort(unsortedCountries);
         return unsortedCountries;
