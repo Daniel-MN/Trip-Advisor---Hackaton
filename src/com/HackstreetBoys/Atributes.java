@@ -21,6 +21,7 @@ public abstract class Atributes {
         ratingReturn = ratingReturn / this.nrRating;
         return ratingReturn;
     }
+
     void changeRating(float rating) {
         this.rating = rating;
     }

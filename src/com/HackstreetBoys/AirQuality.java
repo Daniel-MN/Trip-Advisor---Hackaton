@@ -103,6 +103,19 @@ public class AirQuality extends Atributes {
     }
 
     @Override
+    public float getRating() {
+        if (parameters[6].getValue() < 10) {
+            return 2;
+        }
+
+        if (parameters[6].getValue() >= 10 & parameters[6].getValue() < 15) {
+            return (float) (2 - 0.2 * (15 - parameters[6].getValue()));
+        }
+
+        return 0;
+    }
+
+    @Override
     public String toString() {
         StringBuilder string = new StringBuilder("");
         for (int i = 0; i < 9; i++) {

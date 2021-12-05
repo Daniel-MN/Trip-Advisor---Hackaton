@@ -2,10 +2,10 @@ package com.HackstreetBoys;
 
 import java.util.HashMap;
 
-public class HealthInsurance extends Atributes{
+public class HealthInsurance extends Atributes {
     private int ID;
     private HashMap<Integer, String> insuranceProviders;
-    private int nrProviders;
+    private int nrProviders = 0;
 
     public HealthInsurance(int ID, String description) {
         super(description);
@@ -44,6 +44,13 @@ public class HealthInsurance extends Atributes{
 
     public void setNrProviders(int nrProviders) {
         this.nrProviders = nrProviders;
+    }
+
+    @Override
+    public float getRating() {
+        if (nrProviders >= 5) {
+             return 1;
+        } else return (float) (nrProviders * 0.2);
     }
 
     @Override

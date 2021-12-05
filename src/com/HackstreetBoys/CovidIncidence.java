@@ -64,7 +64,10 @@ public class CovidIncidence extends Atributes{
         this.ID = ID;
     }
 
-
+    @Override
+    public float getRating() {
+        return this.getIncidence()/10;
+    }
 
     public int getNewConfirmed() {
         return newConfirmed;

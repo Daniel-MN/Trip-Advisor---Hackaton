@@ -65,5 +65,24 @@ public class EntryRequirements extends Atributes{
                 this.otherVaccines.remove(i);
         }
     }
+
+    @Override
+    public float getRating() {
+        if (this.isCovidVaccine()) {
+            return 1;
+        }
+        if (this.isAntigenTest() || this.isPCRtest()) {
+            return 0;
+        }
+        return 0;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder string = new StringBuilder("    Covid Vaccine: " + (this.isCovidVaccine()?"YES":"NO") + "\n");
+        string.append("    PCR Test: " + (this.isPCRtest()?"YES":"NO") + "\n");
+        string.append("    Antigen Test: " + (this.isAntigenTest()?"YES":"NO") + "\n");
+        return string.toString();
+    }
 }
 

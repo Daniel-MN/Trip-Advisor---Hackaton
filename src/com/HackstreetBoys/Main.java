@@ -33,10 +33,5 @@ public class Main {
         tara.setNaturalDisasters(disaster);
         Restrictions restrictii = new Restrictions(true, "Yes", "Yes", "All the time", "Basically prison");
         tara.setRestrictions(restrictii);
-        System.out.println(tara.toString());
-
-        for (Country country : database.getCountries().values()) {
-//            System.out.println("ID = " + country.getID() + ";   Name = " + country.getName() + ";   NewConfirmed = " + country.getCovidIncidence().getNewConfirmed());
-        }
     }
 }

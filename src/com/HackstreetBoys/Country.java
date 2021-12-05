@@ -10,6 +10,7 @@ public class Country {
     private HealthInsurance healthInsurance;
     private NaturalDisasters naturalDisasters;
     private Restrictions restrictions;
+    private EntryRequirements requirements;
     private static int nrCountries = 0;
 
     public Country(int ID, String name, CovidIncidence covidIncidence) {
@@ -110,6 +111,16 @@ public class Country {
         Country.nrCountries = nrCountries;
     }
 
+    public EntryRequirements getRequirements() {
+        return requirements;
+    }
+
+    public void setRequirements(EntryRequirements requirements) {
+        this.requirements = requirements;
+    }
+
+
+
     @Override
     public String toString() {
         StringBuilder string = new StringBuilder("Country: " + this.getName() + "\n");
@@ -129,6 +140,7 @@ public class Country {
         string.append("Restrictions: \n" + this.getRestrictions().toString());
         string.append(this.getRestrictions().getDescription() + "\n");
         string.append("Air quality Indicators: \n" + this.getAirquality().toString());
+        string.append("Entry requirements:\n" + this.getRequirements().toString());
         string.append("Health System Rating: " + this.getHealthSystem().getRating() + "\n");
         string.append("Health insurance providers: " + this.getHealthInsurance().toString());
         return string.toString();

@@ -14,4 +14,18 @@ public class Administration {
         }
         return null;
     }
+
+    public static float calculateRatingCountry(Country country) {
+        float ratingCountry = 0F;
+        if (country.getNaturalDisasters().isDisaster()) {
+            ratingCountry -=4;
+        }
+
+        if (country.getConflictZone().isConflict()) {
+            ratingCountry -=4;
+        }
+
+        ratingCountry += country.getCovidIncidence().getRating() + country.getHealthInsurance().getRating() + country.getAirquality().getRating() + country.getHealthSystem().getRating() + country.getRequirements().getRating();
+        return ratingCountry;
+    }
 }

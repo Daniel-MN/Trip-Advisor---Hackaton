@@ -47,6 +47,29 @@ public class Restrictions extends Atributes{
     }
 
     @Override
+    public float getRating() {
+        if (this.isLockDown()) {
+            return 0;
+        }
+
+        float rating = 0;
+
+        if (this.getMaskRequired() == null) {
+            rating += 1;
+        }
+
+        if (this.getMobilityRestrictions() == null) {
+            rating += 0.5;
+        }
+
+        if (this.getRegulatedClosingHours() == null) {
+            rating += 0.5;
+        }
+
+        return rating;
+    }
+
+    @Override
     public String toString() {
         StringBuilder string = new StringBuilder("Lockdown: ");
         if (this.isLockDown()) {
