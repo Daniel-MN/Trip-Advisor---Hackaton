@@ -30,12 +30,18 @@ public class HealthSystem extends Atributes{
         this.bestHospitalInCountry = bestHospitalInCountry;
     }
 
+    //Nr maxim 2;
     public float getSystemRating() {
         return systemRating;
     }
 
     public void setSystemRating(float systemRating) {
         this.systemRating = systemRating;
+    }
+
+    @Override
+    public float getRating() {
+        return getSystemRating();
     }
 }
 
