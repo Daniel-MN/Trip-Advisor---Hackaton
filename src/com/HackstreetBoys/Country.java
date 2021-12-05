@@ -17,6 +17,13 @@ public class Country {
         this.name = name;
         this.ID = ID;
         this.covidIncidence = covidIncidence;
+        this.airquality = new AirQuality(ID,"No description");
+        this.conflictZone = new ConflictZone(ID, false, "No description");
+        this.healthSystem = new HealthSystem(ID, 0, "No Hospital", 0, "No desciption");
+        this.healthInsurance = new HealthInsurance(ID, "No description");
+        this.naturalDisasters = new NaturalDisasters(ID, "No description", "No type", false);
+        this.restrictions = new Restrictions(false, "No mask", "No mobility restrictions", "No regulating closing hours", "No description");
+        this.requirements = new EntryRequirements(ID, false, false, false, null, "No desccription");
     }
 
     public Country(String name, int ID, AirQuality airquality, ConflictZone conflictZone, CovidIncidence covidIncidence, HealthSystem healthSystem, HealthInsurance healthInsurance, NaturalDisasters naturalDisasters, Restrictions restrictions) {

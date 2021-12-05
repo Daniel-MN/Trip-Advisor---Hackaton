@@ -13,6 +13,7 @@ public class CovidIncidence extends Atributes{
         this.totalDeaths = totalDeaths;
         this.newConfirmed = newConfirmed;
         this.ID = ID;
+
     }
 
     public CovidIncidence(int ID, int totalConfirmedCases, int vaccinationRate, String description) {
